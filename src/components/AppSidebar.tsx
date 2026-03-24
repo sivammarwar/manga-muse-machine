@@ -14,7 +14,7 @@ import {
   SidebarHeader,
   useSidebar,
 } from "@/components/ui/sidebar";
-import { Home } from "lucide-react";
+import { Home, LayoutDashboard } from "lucide-react";
 
 export function AppSidebar() {
   const { state } = useSidebar();
@@ -49,6 +49,18 @@ export function AppSidebar() {
                   >
                     <Home className="mr-2 h-4 w-4" />
                     {!collapsed && <span>Home</span>}
+                  </NavLink>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                  <NavLink
+                    to="/admin"
+                    className="hover:bg-muted/50"
+                    activeClassName="bg-muted text-primary font-medium"
+                  >
+                    <LayoutDashboard className="mr-2 h-4 w-4" />
+                    {!collapsed && <span>Admin</span>}
                   </NavLink>
                 </SidebarMenuButton>
               </SidebarMenuItem>
