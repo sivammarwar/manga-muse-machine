@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { MainLayout } from "@/components/MainLayout";
 import Index from "./pages/Index";
+import AdminDashboard from "./pages/AdminDashboard";
 import CategoryPage from "./pages/CategoryPage";
 import SeriesPage from "./pages/SeriesPage";
 import ChapterPage from "./pages/ChapterPage";
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/category/:categoryId" element={<CategoryPage />} />
             <Route path="/series/:seriesId" element={<SeriesPage />} />
             <Route path="/series/:seriesId/chapter/:chapterNum" element={<ChapterPage />} />
+            <Route path="/admin" element={<AdminDashboard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </MainLayout>
